@@ -1,0 +1,60 @@
+.about-us {
+  &--with-img .section-title {
+    margin-bottom: 24px;
+  }
+
+  &__img {
+    background-image: url('../images/turntable-about-us.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    width: calc(100% + (#{$layout-inline-offset-mobile} * 2));
+    height: 200px;
+    margin-bottom: 48px;
+    margin-inline: -$layout-inline-offset-mobile;
+
+    @include on-tablet {
+      width: calc(100% + (#{$layout-inline-offset-tablet} * 2));
+      height: 400px;
+      margin-bottom: 120px;
+      margin-inline: -$layout-inline-offset-tablet;
+    }
+
+    @include on-desktop {
+      height: 460px;
+      width: 100vw;
+      margin-inline: calc((100vw - 100%) / -2);
+    }
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 1 / 4;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__content {
+    @include page-grid;
+  }
+
+  &__description {
+    margin: 0;
+    line-height: 140%;
+    grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: 4 / 7;
+    }
+
+    @include on-desktop {
+      grid-column: 8 / 13;
+    }
+  }
+}

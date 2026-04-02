@@ -1,0 +1,19 @@
+.section-title {
+  margin: 0;
+  margin-bottom: 48px;
+
+  // Exception to BEM:
+  // margin is defined within the block for educational purposes only
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+
+  @include on-tablet {
+    margin-bottom: 56px;
+    font-size: 40px;
+  }
+
+  @include on-desktop {
+    font-size: 48px;
+  }
+}

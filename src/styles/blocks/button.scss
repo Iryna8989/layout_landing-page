@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  height: 56px;
+  padding-inline: 48px;
+  border: none;
+  border-radius: 8px;
+
+  outline: none;
+
+  color: $text-color-light;
+  font-weight: 700;
+
+  background-color: $accent-color;
+
+  cursor: pointer;
+
+  transition: background-color $effect-duration;
+
+  &:hover {
+    background-color: $main-text-color;
+  }
+
+  &:active {
+    background-color: $accent-color-active;
+  }
+}

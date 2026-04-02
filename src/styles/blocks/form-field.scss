@@ -1,0 +1,26 @@
+.form-field {
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  outline: none;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  background-color: $text-color-form;
+
+  transition:
+    border-color $effect-duration,
+    box-shadow $effect-duration;
+
+  &:hover {
+    border-color: $border-color;
+  }
+
+  &:focus {
+    border-color: $accent-color;
+    box-shadow: 0 0 0 1px $accent-color;
+  }
+}
