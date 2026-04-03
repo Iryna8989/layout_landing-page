@@ -31,8 +31,10 @@
   &__link {
     display: block;
     overflow: hidden;
+    aspect-ratio: 1 / 1;
 
     @include on-tablet {
+      aspect-ratio: unset;
       grid-column: span 3;
     }
 
@@ -43,6 +45,8 @@
 
   &__photo {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 
     @include hover(transform, scale(1.2));
   }

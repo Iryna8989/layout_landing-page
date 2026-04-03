@@ -8,6 +8,28 @@
     padding-block: 32px;
   }
 
+  &__phone {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    text-decoration: none;
+    color: $main-text-color;
+
+    @include on-desktop {
+      &:hover .top-bar__phone-number {
+        display: block;
+      }
+    }
+  }
+
+  &__phone-number {
+    display: none;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 2px;
+  }
+
   &__logo-link {
     display: flex;
   }
