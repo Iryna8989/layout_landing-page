@@ -24,13 +24,18 @@
   }
 
   &__phone-number {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     font-size: 12px;
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 2px;
     transition: opacity $effect-duration;
+
+    @include on-desktop {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   &__logo-link {
@@ -49,6 +54,7 @@
 
   &__icons {
     display: flex;
+    align-items: center;
     gap: 24px;
 
     @include on-tablet {
